@@ -1,0 +1,72 @@
+:root {
+  --slider-animation: slider 12s infinite;
+  --fade-animation: fade 4s infinite;
+}
+
+@keyframes slider {
+  0%,
+  33% {
+    background-image: url(../img/biblioteca.jpeg);
+    --text-description: "Mesa de ping pong";
+  }
+  34%,
+  66% {
+    background-image: url(../img/biblioteca.jpeg);
+    --text-description: "Biblioteca";
+  }
+  67%,
+  100% {
+    background-image: url(../img/biblioteca.jpeg);
+    --text-description: "Refeitório";
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  15%,
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+body {
+  height: 100vh;
+}
+.container {
+  display: grid;
+  place-content: center;
+}
+.container-item {
+  display: grid;
+  grid-template-columns: 1;
+  place-content: center;
+  margin-top: 30vh;
+  gap: 1.5rem;
+}
+#mostrar-foto {
+  height: 200px;
+  width: 400px;
+  border: 1px solid slategray;
+  border-radius: 5px;
+}
+.carrossel {
+  background-image: url(../img/biblioteca.jpeg);
+}

@@ -73,7 +73,6 @@ body {
   place-self: center;
   border: 1px solid rgb(104, 103, 103);
   background-color: rgba(245, 245, 245, 0.8);
-  /* backdrop-filter: blur(4px); */
   border-radius: 1rem;
   padding: 2rem;
 }

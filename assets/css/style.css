@@ -69,13 +69,14 @@ body {
   height: 100dvh;
   transition: 500ms;
 }
+
 .container {
   display: grid;
   place-self: center;
   border: 1px solid rgb(104, 103, 103);
   background-color: rgba(245, 245, 245, 0.8);
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 2rem 2rem 1rem 2rem;
 }
 .container-item {
   display: grid;
@@ -88,7 +89,7 @@ body {
   height: 200px;
   width: 400px;
   border: 1px solid slategray;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 body:has(#mostrar-foto:hover) {
@@ -166,4 +167,15 @@ input,
 
 .imgContainer {
   background-size: cover;
+}
+
+#local-p {
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+#local-p::after {
+  content: var(--text-description);
 }

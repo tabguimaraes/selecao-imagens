@@ -9,27 +9,22 @@
   0%,
   20% {
     background-image: url(../img/cidade.jpg);
-    --text-description: "Cidade";
   }
   21%,
   40% {
     background-image: url(../img/deck.jpg);
-    --text-description: "Deck";
   }
   41%,
   60% {
     background-image: url(../img/floresta.jpg);
-    --text-description: "Floresta";
   }
   61%,
   80% {
     background-image: url(../img/lago.jpg);
-    --text-description: "Lago";
   }
   81%,
   100% {
     background-image: url(../img/montanha.jpg);
-    --text-description: "Rio";
   }
 }
 
@@ -70,7 +65,7 @@ body {
   transition: 500ms;
 }
 
-.container {
+.main {
   display: grid;
   place-self: center;
   border: 1px solid rgb(104, 103, 103);
@@ -78,7 +73,7 @@ body {
   border-radius: 1rem;
   padding: 2rem 2rem 1rem 2rem;
 }
-.container-item {
+.container {
   display: grid;
   grid-template-columns: 1;
   place-content: center;
@@ -97,27 +92,26 @@ body:has(#mostrar-foto:hover) {
   cursor: pointer;
 }
 
-.slider {
+.sliderEffect {
   animation: var(--slider-animation);
-  background-size: cover;
+  /* background-size: cover; */
 }
-.fade {
+.fadeEffect {
   animation: var(--fade-animation);
 }
 
-.blur {
+.grayScaleEffect {
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: grayscale(100%);
-  z-index: -1;
 }
 
-.form {
+.formContainer {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-#btn-imagem {
+#btnImagem {
   background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
   border: 1px solid gray;
   border-radius: 5px;
@@ -126,13 +120,13 @@ body:has(#mostrar-foto:hover) {
   transition: 300ms;
 }
 
-#btn-imagem:hover {
+#btnImagem:hover {
   transform: scale(1.1);
   cursor: pointer;
   color: black;
 }
 
-.text-p {
+.tituloContainer {
   text-align: center;
   font-size: 1.3rem;
 }
@@ -141,8 +135,8 @@ span {
   font-weight: 600;
 }
 
-input,
-#btn-imagem {
+#textInputField,
+#btnImagem {
   font-size: large;
   padding: 0.5rem;
   width: 50%;
@@ -169,13 +163,13 @@ input,
   background-size: cover;
 }
 
-#local-p {
+#tituloCidade {
   padding-top: 1rem;
   text-align: center;
   font-size: 1.2rem;
   font-weight: 500;
 }
 
-#local-p::after {
+#tituloCidade::after {
   content: var(--text-description);
 }

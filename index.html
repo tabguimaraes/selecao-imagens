@@ -7,23 +7,22 @@
     <script src="./assets/js/script.js" defer></script>
     <title>Seleção de imagens</title>
   </head>
-  <body class="slider blur imgContainer">
-    <main class="container">
-      <div class="container-item">
-        <p class="text-p">
+  <body class="sliderEffect grayScaleEffect imgContainer">
+    <main class="main">
+      <div class="container">
+        <p class="tituloContainer">
           Digite o nome ou número da foto <br />
           ou <br />
           clique no botão <span>AUTO</span>
         </p>
-        <div class="form">
-          <input type="text" id="inputFoto" />
-          <button id="btn-imagem">AUTO</button>
+        <div class="formContainer">
+          <input type="text" id="textInputField" />
+          <button id="btnImagem">AUTO</button>
         </div>
-
         <h2>Visualização</h2>
-        <div class="fade">
-          <div class="slider imgContainer" id="mostrar-foto"></div>
-          <p id="local-p"></p>
+        <div class="fadeEffect">
+          <div class="sliderEffect imgContainer" id="mostrar-foto"></div>
+          <p id="tituloCidade"></p>
         </div>
       </div>
     </main>

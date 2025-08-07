@@ -147,3 +147,23 @@ input,
   width: 50%;
   align-self: center;
 }
+
+.img1 {
+  background-image: url("../img/cidade.jpg");
+}
+.img2 {
+  background-image: url("../img/deck.jpg");
+}
+.img3 {
+  background-image: url("../img/floresta.jpg");
+}
+.img4 {
+  background-image: url("../img/lago.jpg");
+}
+.img5 {
+  background-image: url("../img/montanha.jpg");
+}
+
+.imgContainer {
+  background-size: cover;
+}

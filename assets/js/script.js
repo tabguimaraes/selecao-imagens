@@ -20,8 +20,6 @@ btnImagem.addEventListener("click", function (evento) {
 inputFoto.addEventListener("change", function (evento) {
   entrada = String(evento.target.value).toLowerCase();
 
-  console.log(entrada);
-
   switch (entrada) {
     case "01":
     case "1":
@@ -71,6 +69,8 @@ inputFoto.addEventListener("change", function (evento) {
       break;
 
     default:
+      inputFoto.value = "";
+      inputFoto.setAttribute("placeholder", "Não encontrado");
       break;
   }
 });

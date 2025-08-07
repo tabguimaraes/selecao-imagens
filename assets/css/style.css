@@ -9,22 +9,27 @@
   0%,
   20% {
     background-image: url(../img/cidade.jpg);
+    --text-description: "Cidade";
   }
   21%,
   40% {
     background-image: url(../img/deck.jpg);
+    --text-description: "Deck";
   }
   41%,
   60% {
     background-image: url(../img/floresta.jpg);
+    --text-description: "Floresta";
   }
   61%,
   80% {
     background-image: url(../img/lago.jpg);
+    --text-description: "Lago";
   }
   81%,
   100% {
     background-image: url(../img/montanha.jpg);
+    --text-description: "Montanha";
   }
 }
 

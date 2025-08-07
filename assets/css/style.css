@@ -8,27 +8,27 @@
 @keyframes slider {
   0%,
   20% {
-    background-image: url(../img/cidade.jpeg);
+    background-image: url(../img/cidade.jpg);
     --text-description: "Cidade";
   }
   21%,
   40% {
-    background-image: url(../img/deck.jpeg);
+    background-image: url(../img/deck.jpg);
     --text-description: "Deck";
   }
   41%,
   60% {
-    background-image: url(../img/floresta.jpeg);
+    background-image: url(../img/floresta.jpg);
     --text-description: "Floresta";
   }
   61%,
   80% {
-    background-image: url(../img/lago.jpeg);
+    background-image: url(../img/lago.jpg);
     --text-description: "Lago";
   }
   81%,
   100% {
-    background-image: url(../img/rio.jpeg);
+    background-image: url(../img/montanha.jpg);
     --text-description: "Rio";
   }
 }
@@ -66,16 +66,16 @@ img {
 body {
   display: flex;
   justify-content: center;
-  height: 100vh;
-  background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+  height: 100dvh;
 }
 .container {
   display: grid;
   place-self: center;
   border: 1px solid rgb(104, 103, 103);
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(245, 245, 245, 0.8);
+  /* backdrop-filter: blur(4px); */
   border-radius: 1rem;
-  padding: 2.5rem;
+  padding: 2rem;
 }
 .container-item {
   display: grid;
@@ -90,6 +90,12 @@ body {
   border: 1px solid slategray;
   border-radius: 5px;
 }
+
+body:has(#mostrar-foto:hover) {
+  backdrop-filter: grayscale(0%);
+  cursor: pointer;
+}
+
 .slider {
   animation: var(--slider-animation);
   background-size: cover;
@@ -100,7 +106,8 @@ body {
 
 .blur {
   background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(4px);
+  backdrop-filter: grayscale(100%);
+  z-index: -1;
 }
 
 .form {
@@ -110,7 +117,7 @@ body {
 }
 
 #btn-imagem {
-  background: linear-gradient(90deg, rgba(42, 123, 155, 0.8) 0%, rgba(87, 199, 133, 0.8) 50%, rgba(237, 221, 83, 0.8) 100%);
+  background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
   border: 1px solid gray;
   border-radius: 5px;
   color: rgb(44, 44, 44);

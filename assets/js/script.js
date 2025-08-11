@@ -13,7 +13,7 @@ const tituloCidade = document.querySelector("#tituloCidade");
 btnImagem.addEventListener("click", function (evento) {
   evento.preventDefault();
   textInputField.value = "";
-  textInputField.setAttribute("placeholder", "");
+  setPlaceHolder();
   fadeEffect.classList.add("fadeEffect");
 
   imgContainer.forEach((element) => {

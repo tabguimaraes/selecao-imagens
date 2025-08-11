@@ -25,7 +25,7 @@ btnImagem.addEventListener("click", function (evento) {
 });
 
 textInputField.addEventListener("change", function (evento) {
-  entrada = String(evento.target.value).toLowerCase();
+  entrada = String(evento.target.value).toLowerCase().trim();
 
   switch (entrada) {
     case "01":

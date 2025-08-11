@@ -31,6 +31,7 @@ textInputField.addEventListener("change", function (evento) {
     case "01":
     case "1":
     case "cidade":
+      setPlaceHolder();
       imgContainer.forEach((element) => {
         element.classList.remove(...classesIMG, "sliderEffect");
         fadeEffect.classList.remove("fadeEffect");
@@ -42,6 +43,7 @@ textInputField.addEventListener("change", function (evento) {
     case "02":
     case "2":
     case "deck":
+      setPlaceHolder();
       imgContainer.forEach((element) => {
         element.classList.remove(...classesIMG, "sliderEffect");
         fadeEffect.classList.remove("fadeEffect");
@@ -52,6 +54,7 @@ textInputField.addEventListener("change", function (evento) {
     case "03":
     case "3":
     case "floresta":
+      setPlaceHolder();
       imgContainer.forEach((element) => {
         element.classList.remove(...classesIMG, "sliderEffect");
         fadeEffect.classList.remove("fadeEffect");
@@ -62,6 +65,7 @@ textInputField.addEventListener("change", function (evento) {
     case "04":
     case "4":
     case "lago":
+      setPlaceHolder();
       imgContainer.forEach((element) => {
         element.classList.remove(...classesIMG, "sliderEffect");
         fadeEffect.classList.remove("fadeEffect");
@@ -72,6 +76,7 @@ textInputField.addEventListener("change", function (evento) {
     case "05":
     case "5":
     case "montanha":
+      setPlaceHolder();
       imgContainer.forEach((element) => {
         element.classList.remove(...classesIMG, "sliderEffect");
         fadeEffect.classList.remove("fadeEffect");
@@ -82,9 +87,20 @@ textInputField.addEventListener("change", function (evento) {
 
     default:
       textInputField.value = "";
-      textInputField.setAttribute("placeholder", "Não encontrado");
+      setPlaceHolder("notFind");
       tituloCidade.innerHTML = "";
       break;
   }
   textInputField.value = "";
 });
+
+function setPlaceHolder(value) {
+  if (value === "notFind") {
+    textInputField.setAttribute("placeholder", "Não encontrado");
+    setTimeout(() => {
+      textInputField.setAttribute("placeholder", "");
+    }, 2000);
+  } else {
+    textInputField.setAttribute("placeholder", "");
+  }
+}
